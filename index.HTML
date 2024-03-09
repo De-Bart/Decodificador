@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decoficador</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Decoficador</title>
+    </head>
+    <body>
+        <header>
+            <img class="img__logo" src="assets/logo.svg" width="120" height="48" alt="Logo Alura">
+        </header>
+        <section class="main">
+            <div class="caixa">
+                <textarea class="input" id="input" style="resize: none;" placeholder="Digite seu texto"></textarea>
+                <img class="img__frame" src="assets/alerta.svg" alt="sinal de exclamação">
+                <label for="input">Apenas letras minúsculas e sem acento.</label>
+                <div class="botoes">
+                    <button class="btn1" onclick="btnEncriptar()" id="criptografar">Encriptar</button>
+                    <button class="btn2" onclick="btnDesencriptar()" id="descriptografar">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <section class="main2">
+            <div class="caixa2" id="caixa2">
+                <div class="caixaContainer" id="caixaContainer">
+                    <img class="img__boneco" id="img__boneco" src="assets/boneco.svg" alt="pesssoa fazendo pesquisa">
+                    <div class="p" id="p">
+                        <p><strong style="font-size: 1.4rem;"> Nenhuma mensagem encontrada</strong></p>
+                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div>
+                </div>
+                <div id="textoNovo" style="display: none;" class="textoNovo">
+                    <textarea id="output" style="resize: none;" class="output"></textarea>
+                </div>
+                <button class="btn3" onclick="copiar()" style="display: none;" id="copiar">Copiar</button>
+            </div>
+        </section>
+        <script src="script.js" defer></script>
+    </body>
 </html>

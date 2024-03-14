@@ -55,4 +55,5 @@ function mostrarConteudoNovo() {
 function copiar() {
     textoCriptografado.select();
     document.execCommand("copy");
+    textoCriptografado.value = "";
 }
